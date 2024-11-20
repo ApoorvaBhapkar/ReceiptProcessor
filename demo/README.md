@@ -4,7 +4,7 @@
 - Create a Docker image by running the following command: docker build -t your-app-name .
 - Start a Docker container with your application running on port 8080: docker run -p 8080:8080 your-app-name
 - Use Postman or any HTTP client to send a POST request to http://localhost:8080/receipts/process.
-# JSON Request Body 
+### JSON Request Body 
 {
   "retailer": "Target",
   "purchaseDate": "2022-01-01",
