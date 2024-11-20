@@ -25,5 +25,29 @@ public class Receipt {
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Item> items;
+    
+    public Long getId() {
+        return id;
+    }
+
+    public String getRetailer() {
+        return retailer;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public String getPurchaseDate() {
+        return purchaseDate;
+    }
+
+    public String getPurchaseTime() {
+        return purchaseTime;
+    }
 
 }

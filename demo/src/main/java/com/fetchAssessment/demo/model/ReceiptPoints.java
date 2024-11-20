@@ -23,4 +23,16 @@ public class ReceiptPoints {
         this.receiptId = receiptId;
         this.points = points;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public Long getReceiptId() {
+        return receiptId;
+    }
+    
+    public Integer getPoints() {
+        return points;
+    }
 }

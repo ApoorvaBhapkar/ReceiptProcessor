@@ -16,4 +16,16 @@ public class Item {
 
     private String shortDescription;
     private double price;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getShortDescription() {
+        return shortDescription;
+    }
+    
+    public double getPrice() {
+        return price;
+    }
 }

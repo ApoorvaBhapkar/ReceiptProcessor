@@ -28,7 +28,7 @@ public class ReceiptProcessorService {
         try {
             receiptRepository.save(receipt);
             ReceiptPoints receiptPoints = calculateAndSavePoints(receipt);
-            return new ResponseEntity<>(receiptPoints.getId(),HttpStatus.OK);
+            return new ResponseEntity<String>(receiptPoints.getId(),HttpStatus.OK);
         } catch (Exception ex) {
             throw new RuntimeException("Error saving receipt with ID: " + receipt.getId(), ex);
         }
@@ -40,7 +40,7 @@ public class ReceiptProcessorService {
             ReceiptPoints receiptPoints = receiptPointsRepository.findById(uuid.toString())
                     .orElseThrow(() -> new RuntimeException("Receipt points not found for ID: " + id));
             
-            return new ResponseEntity<>(receiptPoints.getPoints(),HttpStatus.OK);
+            return new ResponseEntity<Integer>(receiptPoints.getPoints(),HttpStatus.OK);
         } catch (IllegalArgumentException ex) {
             // Handle invalid UUID format
             throw new RuntimeException("Invalid receipt point ID format: " + id, ex);

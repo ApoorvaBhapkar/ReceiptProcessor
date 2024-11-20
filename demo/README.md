@@ -40,7 +40,7 @@
 - spring.datasource.url=jdbc:h2:mem:receiptProcessor
 - spring.datasource.driver-class-name=org.h2.Driver
 - spring.datasource.username=sa
-- spring.datasource.password=password
+- keep passwoed blank
 
 # Stopping and Cleaning Up Docker Containers
 - docker stop <container_id>
