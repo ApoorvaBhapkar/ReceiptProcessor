@@ -1,6 +1,7 @@
 # Steps to Run the Application in Docker 
 - Open terminal and go to the directory where your Spring Boot project (demo folder) is located.
-- Run the following command to clean and package your Spring Boot project: ./mvnw clean package
+- Make sure you have maven install.
+- Run the following command to clean and package your Spring Boot project: mvn clean install
 - Create a Docker image by running the following command: docker build -t your-app-name .
 - Start a Docker container with your application running on port 8080: docker run -p 8080:8080 your-app-name
 - Use Postman or any HTTP client to send a POST request to http://localhost:8080/receipts/process.
